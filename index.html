@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YESMAN DEV</title>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SOFTYES</title>
+        <link rel="stylesheet" href="styles.css">
 </head>
-    <body>
-        <header>
-            <h1>YESMAN DEV</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Inicio</a></li>
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#contact">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
+<body>
+<div id="app">
+    <section id="home" class="view active">
+        <h1>SOFTYES</h1>
+        <div class="buttons">
+            <button data-target="page1">Página 1</button>
+            <button data-target="page2">Página 2</button>
+            <button data-target="page3">Página 3</button>
+            <button data-target="page4">Página 4</button>
+        </div>
+    </section>
 
-        <section id="home">
-            <h2>Bienvenido a YESMAN DEV</h2>
-            <p>Somos una empresa dedicada al desarrollo de software y soluciones</p>
-        </section>
-        <section id="services">
-            <h2>Servicios</h2>
-            <ul>
-                <li>Desarrollo web</li>
-                <li>Desarrollo móvil</li>
-                <li>Consultoría tecnológica</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta? ¡Estamos aquí para ayudarte!</p>
-        </section>
-    </body>
+    <section id="page1" class="view">
+        <h2>Página 1</h2>
+        <p>Contenido de la página 1.</p>
+        <button data-target="home" class="back">Volver</button>
+    </section>
+
+    <section id="page2" class="view">
+        <h2>Página 2</h2>
+        <p>Contenido de la página 2.</p>
+        <button data-target="home" class="back">Volver</button>
+    </section>
+
+    <section id="page3" class="view">
+        <h2>Página 3</h2>
+        <p>Contenido de la página 3.</p>
+        <button data-target="home" class="back">Volver</button>
+    </section>
+
+    <section id="page4" class="view">
+        <h2>Página 4</h2>
+        <p>Contenido de la página 4.</p>
+        <button data-target="home" class="back">Volver</button>
+    </section>
+</div>
+
+<script src="app.js" defer></script>
+</body>
 </html>

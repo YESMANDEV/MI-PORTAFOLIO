@@ -1,0 +1,24 @@
+/* Estilos responsivos para SPA de 4 botones */
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --accent:#0078d4;
+  --text:#0b2545;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+body{background:var(--bg);color:var(--text);display:flex;align-items:center;justify-content:center;padding:20px}
+#app{width:100%;max-width:900px}
+.view{display:none;background:var(--card);padding:28px;border-radius:12px;box-shadow:0 6px 20px rgba(16,24,40,0.08)}
+.view.active{display:block}
+h1,h2{margin:0 0 18px 0}
+.buttons{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px}
+.buttons button, .back{appearance:none;border:0;padding:16px 18px;border-radius:10px;background:linear-gradient(180deg,var(--accent),#005a9e);color:#fff;font-size:1rem;cursor:pointer}
+.buttons button:active, .back:active{transform:translateY(1px)}
+.back{background:#e1e7ef;color:var(--text);margin-top:18px}
+@media (max-width:420px){.buttons{grid-template-columns:1fr}}
+
+/* transiciones suaves */
+.view{transition:opacity .18s ease,transform .18s ease}
+.view:not(.active){opacity:0;transform:translateY(8px)}
+.view.active{opacity:1;transform:none}
